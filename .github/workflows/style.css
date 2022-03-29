@@ -1,0 +1,124 @@
+*{
+    margin: 15;    
+    padding: 20;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: orange;
+    color: black;
+    font-family: 'Cabin:ital@1',sans-serif;
+}
+
+header{
+    font-size: 1.4rem;
+}
+
+header,form{
+    min-height: 5vh;
+    min-width: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+form input,
+form button{
+    background: white;
+    border : none;
+}
+
+.todo-container{
+    display :flex;
+    justify-content: center;
+    align-items : center;
+}
+
+.todo-list{
+    min-width: 25%;
+    list-style: none;
+}
+
+.todo-date
+{
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo p{
+    background: orange;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn
+{
+    background: red;
+    color: white;
+    border : none;
+    padding : 1rem;
+    cursor: pointer;
+}
+
+.completed-btn{
+    background: green;
+    color: white;
+    border : none;
+    padding : 1rem;
+    cursor: pointer;
+}
+
+.date-completed{
+ min-height: 100%;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity :0.5;
+}
+
+.uncompleted{
+    text-decoration: none;
+    opacity :1.0;
+}
+
+.fall{
+    transform : translateY(10rem);
+    opacity:0;
+}
+
+.malopilne{
+    opacity :1.0;
+}
+
+.standardowe
+{
+    opacity :1.0;
+}
+
+.bardzopilne
+{
+    opacity :1.0;
+}   
