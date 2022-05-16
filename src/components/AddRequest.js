@@ -100,19 +100,3 @@ const AddRequest = () => {
 }
 
 export default AddRequest;
-
-/*
-
-  let result = Students.map(el => {
-            el.reply.push({"id" : 4,
-            "first_name" : "Alan",
-            "surname" : "Green" ,
-            "email" : "abc",
-            "description" : "I like butter",
-            "tags" : "a b",
-            "subjects" : "maths physics"});
-            return el;
-        });
-        this.setState({Students : result})
-
-*/

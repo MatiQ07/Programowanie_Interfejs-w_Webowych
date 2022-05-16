@@ -28,7 +28,11 @@ export const Students = [
     "tags" : "e f",
     "subjects" : "sports german",
 }]
+
+"image":"https://random-memer.herokuapp.com"
+
 */
+
 export const Students = [{"id":1,"first_name":"Roarke","surname":"Moncarr","email":"rmoncarr0@webeden.co.uk","description":"DIPYRIDAMOLE","tags":"Alpine Fleabane","subjects":"archive"},
 {"id":2,"first_name":"Charlie","surname":"Winfrey","email":"cwinfrey1@tripod.com","description":"Fosinopril Sodium","tags":"Mt. Diablo Helianthella","subjects":"Expanded"},
 {"id":3,"first_name":"Kalle","surname":"Sutehall","email":"ksutehall2@nytimes.com","description":"Donepezil hydrochloride","tags":"Lipped Orchid","subjects":"well-modulated"},

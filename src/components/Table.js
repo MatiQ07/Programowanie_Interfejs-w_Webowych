@@ -1,5 +1,4 @@
 import React from "react";
-import SendMessage from './SendMessage.js'
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 const Table = ({data}) => {
@@ -13,6 +12,7 @@ const Table = ({data}) => {
                     <th>Tags</th>
                     <th>Subjects</th>
                     <th>Contact</th>
+                    <th>Image</th>
                 </tr>
                 {data.map((item) => (
                     <tr key={item.id}>
@@ -21,7 +21,8 @@ const Table = ({data}) => {
                         <td>{item.description}</td>
                         <td>{item.tags}</td>
                         <td>{item.subjects}</td>
-                        <td><Link to="/SendMessage"><button> Send Message </button></Link></td>      
+                        <td><Link to="/SendMessage"><button> Send Message </button></Link></td>
+                        <td><Link to="/Profile"><img src="https://random-memer.herokuapp.com" alt="ime" width="100" height="100"></img></Link></td>     
                         </tr>                
                 ))}
             </tbody>
