@@ -1,6 +1,8 @@
 import React,{ useState} from "react";
+import {registerWithEmailAndPassword } from "../firebase/users";
 
 function Register() {
+  
 
 let [list] = useState(() => {
     const localData = localStorage.getItem("users");
@@ -69,7 +71,7 @@ const checkData = (values) => {
       <input type="text" className = "search" value={email} onChange={handleChangeEmail} placeholder="email"></input>
       <p>{formErrors.password}</p>
       <input type="password" className = "search" value={password} onChange={handleChangePassword} placeholder="password"></input>
-      <button onClick={register} className="LoginButton"> Register </button>      
+      <button onClick={(e)=>{registerWithEmailAndPassword(login,email,password)}} className="LoginButton"> Register </button>      
     </div>
   );
 }

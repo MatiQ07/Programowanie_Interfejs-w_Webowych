@@ -10,12 +10,20 @@ import SendMessage from './components/SendMessage';
 import Profile from './components/Profile'
 import Register from './components/Register'
 import { UserContext } from './components/UserContext';
+import Login from './components/Login';
+
+import {auth} from "./firebase/init";
+import {useAuthState} from "react-firebase-hooks/auth"
+import { getAuth, updateProfile } from "firebase/auth";
+
 
 function App() {
 
   const [user, setUser] = useState(null);
 
   const value = useMemo(() => ({user, setUser}), [user,setUser]);
+ 
+  const [userr] = useAuthState(auth)
 
   return (     
       <Router>
@@ -25,11 +33,13 @@ function App() {
           <Link to="GroupSearcher"> Group Searcher </Link>
           <Link to="AddRequest"> Add Request </Link>
           <Link to="AddGroup"> Add Group </Link>
-          {user ? <div className="LoggedIn">User logged in</div> : <div></div>}
+          <Link to="Login"> Login </Link>
+          {userr ? <div className="LoggedIn">{userr.displayName} is logged in</div> : <div></div>}
         </nav>
         <UserContext.Provider value={value}>
         <Routes>
           <Route path="/" element = {<Home />}/>
+          <Route path="Login" element = {<Login />}/>
           <Route path="AddRequest" element = {<AddRequest />}/>
           <Route path="AddGroup" element = {<AddGroup />}/>
           <Route path="Searcher" element = {<Searcher />}/>

@@ -1,3 +1,4 @@
+/*
 import React,{useContext, useState} from "react";
 import { UserContext } from "./UserContext";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
@@ -67,5 +68,20 @@ const login = async () => {
     </div>
   );
 }
+
+export default Home;
+*/
+import { logout} from "../firebase/users.js";
+import React from "react";
+
+function Home() {
+  return (
+    <div>
+      <h1>Welcome to the home page</h1>
+      <button className = "LoginButton " onClick={logout}>logout</button>      
+    </div>
+  );
+}
+
 
 export default Home;
